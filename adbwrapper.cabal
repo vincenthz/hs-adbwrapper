@@ -1,0 +1,27 @@
+Name:                adbwrapper
+Version:             0.1.0
+Synopsis:            Simple command tool wrapper for Android ADB
+Description:         wrap some commands from Android Debugger (adb ), into a simple to use package.
+License:             BSD3
+License-file:        LICENSE
+Copyright:           Vincent Hanquez <vincent@snarc.org>
+Author:              Vincent Hanquez <vincent@snarc.org>
+Maintainer:          vincent@snarc.org
+Category:            Wrapper
+Stability:           experimental
+Build-Type:          Simple
+Homepage:            http://github.com/vincenthz/hs-adbwrapper
+Cabal-Version:       >=1.8
+
+Library
+  Exposed-modules:   Android.AdbWrapper
+  Other-modules:     Android.AdbWrapper.Utils
+                     Android.AdbWrapper.Lowlevel
+                     Android.AdbWrapper.Types
+  Build-depends:     base >= 4 && < 5
+                   , process
+  ghc-options:       -Wall -fwarn-tabs
+
+source-repository head
+  type: git
+  location: git://github.com/vincenthz/hs-adbwrapper
